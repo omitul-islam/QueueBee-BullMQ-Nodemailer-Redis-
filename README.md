@@ -1,4 +1,4 @@
-# Email Queue System with BullMQ and Redis
+# Email Queue System with BullMQ and Redis, Nodemailer
 A Node.js system for sending emails in the background using BullMQ and Redis.
 
 ## How It Works
