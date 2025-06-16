@@ -1,9 +1,10 @@
 import { Worker } from 'bullmq';
-import { transporter } from './emailQueue.js';
+import dotenv from 'dotenv';
+import { transporter } from './transporter.js';
+dotenv.config();
 
 const worker = new Worker('emailQueue', async job => {
   const { to, subject, html } = job.data;
-  
   try {
     await transporter.sendMail({
       from: process.env.email,
